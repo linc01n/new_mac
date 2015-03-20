@@ -98,6 +98,7 @@ brew install android-sdk
 brew install libxml2
 brew install mackup
 brew install httpie
+brew install pidcat
 
 # iterm2
 # Preferences → Profiles → Keys
