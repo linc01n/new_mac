@@ -75,6 +75,7 @@ brew cask install android-studio
 brew cask install the-unarchiver
 brew cask install brackets
 brew cask install munki
+brew cask install bit-slicer
 
 brew install libtool --universal
 brew install wine
