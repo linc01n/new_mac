@@ -150,4 +150,5 @@ android update sdk --no-ui --filter 'platform-tools'
 
 mkdir ~/security/
 git clone https://github.com/chengr28/RevokeChinaCerts.git ~/security/RevokeChinaCerts
-sudo sh ~/security/RevokeChinaCerts/Mac/RevokeChinaCerts.sh
+cd ~/security/RevokeChinaCerts/Mac
+sudo sh ./RevokeChinaCerts.sh
