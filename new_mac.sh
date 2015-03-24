@@ -147,3 +147,7 @@ git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
 ~/.scm_breeze/install.sh
 
 android update sdk --no-ui --filter 'platform-tools'
+
+mkdir ~/security/
+git clone https://github.com/chengr28/RevokeChinaCerts.git ~/security/RevokeChinaCerts
+sudo sh ~/security/RevokeChinaCerts/Mac/RevokeChinaCerts.sh
