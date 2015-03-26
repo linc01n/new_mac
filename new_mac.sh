@@ -101,6 +101,7 @@ brew install libxml2
 brew install mackup
 brew install httpie
 brew install pidcat
+brew install watch
 
 # iterm2
 # Preferences → Profiles → Keys
