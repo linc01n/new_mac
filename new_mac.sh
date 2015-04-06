@@ -76,6 +76,7 @@ brew cask install the-unarchiver
 brew cask install brackets
 brew cask install munki
 brew cask install bit-slicer
+brew cask install smcfancontrol-beta
 
 brew install libtool --universal
 brew install wine
