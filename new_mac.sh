@@ -116,6 +116,7 @@ brew install watch
 # Setup git
 git config --global credential.helper osxkeychain
 git config --global core.editor 'emacsclient -t'
+git config --global push.default current
 
 # install oh my zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
