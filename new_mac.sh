@@ -123,9 +123,9 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 
 # install RVM
 \curl -L https://get.rvm.io | bash
-# rvm install 2.1.0 --disable-binary
-rvm install 2.2.0 --disable-binary
-rvm use --create --default 2.2.0@mac
+# rvm install 2.2.2 --disable-binary
+rvm install 2.2.2 --disable-binary
+rvm use --create --default 2.2.2@mac
 gem install lunchy
 
 brew install node
