@@ -135,14 +135,19 @@ xcode-select --install
 npm install -g http-server
 
 #Emacs
-brew install emacs --HEAD --use-git-head --cocoa --srgb
+#brew install emacs --HEAD --use-git-head --cocoa --srgb
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-spacemacs-icon
+
 sudo rm /usr/bin/emacs
 sudo rm -rf /usr/share/emacs
-mkdir -p ~/Library/LaunchAgents
-ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
+#mkdir -p ~/Library/LaunchAgents
+#ln -sfv /usr/local/opt/emacs/*.plist ~/Library/LaunchAgents
 
 # curl -fsSkL https://raw.github.com/cask/cask/master/go | python
-curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+#curl -L https://github.com/bbatsov/prelude/raw/master/utils/installer.sh | sh
+mv ~/.emacs.d ~/.emacs.bak
+git clone --recursive https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 brew tap homebrew/versions
 brew tap --repair
