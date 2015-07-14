@@ -78,6 +78,7 @@ brew cask install munki
 brew cask install bit-slicer
 brew cask install smcfancontrol
 brew cask install kitematic
+brew cask install java6
 
 brew install libtool --universal
 brew install wine
