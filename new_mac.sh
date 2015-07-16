@@ -105,6 +105,7 @@ brew install mackup
 brew install httpie
 brew install pidcat
 brew install watch
+brew install imagemagick
 
 # iterm2
 # Preferences → Profiles → Keys
