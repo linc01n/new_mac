@@ -106,6 +106,7 @@ brew install httpie
 brew install pidcat
 brew install watch
 brew install imagemagick
+brew install hub
 
 # iterm2
 # Preferences → Profiles → Keys
