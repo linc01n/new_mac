@@ -79,6 +79,7 @@ brew cask install bit-slicer
 brew cask install smcfancontrol
 brew cask install kitematic
 brew cask install java6
+brew cask install crosspack-avr
 
 brew install libtool --universal
 brew install wine
