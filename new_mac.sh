@@ -31,7 +31,7 @@ brew cask install fantastical
 # brew cask install tinkertool
 brew cask install xscope3
 brew cask install limechat
-brew cask install flash-player
+brew cask install flash
 brew cask install spotify
 brew cask install shiftit
 brew cask install xquartz
@@ -108,6 +108,7 @@ brew install pidcat
 brew install watch
 brew install imagemagick
 brew install hub
+brew install gnu-sed --with-default-names
 
 # iterm2
 # Preferences → Profiles → Keys
