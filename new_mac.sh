@@ -109,6 +109,7 @@ brew install watch
 brew install imagemagick
 brew install hub
 brew install gnu-sed --with-default-names
+brew install chromedriver
 
 # iterm2
 # Preferences → Profiles → Keys
