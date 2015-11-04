@@ -111,6 +111,7 @@ brew install hub
 brew install gnu-sed --with-default-names
 brew install chromedriver
 brew install homebrew/dupes/rsync
+brew install s3cmd
 
 # iterm2
 # Preferences → Profiles → Keys
