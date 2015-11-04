@@ -125,6 +125,7 @@ brew install s3cmd
 git config --global credential.helper osxkeychain
 git config --global core.editor 'emacsclient -t'
 git config --global push.default current
+git config --global pull.rebase true
 
 # install oh my zsh
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
