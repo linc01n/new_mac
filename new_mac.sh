@@ -170,3 +170,7 @@ mkdir ~/security/
 git clone https://github.com/chengr28/RevokeChinaCerts.git ~/security/RevokeChinaCerts
 cd ~/security/RevokeChinaCerts/Mac
 sudo sh ./RevokeChinaCerts.sh
+
+
+# Enable key repeat
+defaults write -g ApplePressAndHoldEnabled -bool false
