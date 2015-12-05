@@ -108,6 +108,7 @@ brew install pidcat
 brew install watch
 brew install imagemagick
 brew install hub
+brew install coreutils
 brew install gnu-sed --with-default-names
 brew install chromedriver
 brew install homebrew/dupes/rsync
