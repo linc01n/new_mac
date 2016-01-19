@@ -579,3 +579,27 @@ key.setGlobalKey(['C-c', 'C-a'], function (ev, arg) {
   ext.exec("tanything", arg);
 }, 'view all tabs', true);
 // }}
+
+plugins.options["tanything_opt.keymap"] = {
+    "C-z"   : "prompt-toggle-edit-mode",
+    "SPC"   : "prompt-next-page",
+    "b"     : "prompt-previous-page",
+    "j"     : "prompt-next-completion",
+    "k"     : "prompt-previous-completion",
+    "g"     : "prompt-beginning-of-candidates",
+    "G"     : "prompt-end-of-candidates",
+    "D"     : "prompt-cancel",
+    // Tanything specific actions
+    "O"     : "localOpen",
+    "q"     : "localClose",
+    "p"     : "localLeftclose",
+    "n"     : "localRightclose",
+    "a"     : "localAllclose",
+    "d"     : "localDomainclose",
+    "c"     : "localClipUT",
+    "C"     : "localClipU",
+    "e"     : "localMovetoend"
+};
+
+
+plugins.options["kkk.sites"] = ["^https?://([0-9a-zA-Z]+\\.)?github\\.com/", "^https?://([0-9a-zA-Z]+\\.)?google\\.com*/"];
