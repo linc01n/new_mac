@@ -583,7 +583,7 @@ key.setGlobalKey(['C-c', 'C-a'], function (ev, arg) {
 plugins.options["tanything_opt.keymap"] = {
     "C-z"   : "prompt-toggle-edit-mode",
     // Tanything specific actions
-    "C-q"     : "localClose"
+    "K"     : "localClose"
 };
 
 
