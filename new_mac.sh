@@ -33,10 +33,9 @@ brew cask install xscope3
 brew cask install limechat
 brew cask install flash
 brew cask install spotify
-brew cask install shiftit
+brew cask install phoenix
 brew cask install xquartz
 brew cask install licecap
-brew cask install bettertouchtool
 brew cask install vagrant
 brew cask install firefox
 brew cask install thunderbird
