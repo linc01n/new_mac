@@ -9,7 +9,6 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 brew tap caskroom/versions
 brew tap caskroom/fonts
 
-brew install caskroom/cask/brew-cask
 #brew cask install google-chrome
 brew cask install chromium
 # brew cask install sublime-text3
