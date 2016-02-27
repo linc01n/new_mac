@@ -12,8 +12,7 @@ brew tap caskroom/fonts
 brew install caskroom/cask/brew-cask
 #brew cask install google-chrome
 brew cask install chromium
-brew cask install totalfinder
-brew cask install sublime-text3
+# brew cask install sublime-text3
 brew cask install iterm2-beta
 brew cask install alfred
 brew cask install gpgtools
@@ -21,8 +20,8 @@ brew cask install textmate
 brew cask install adium
 brew cask install sourcetree
 brew cask install diffmerge
-brew cask install dropbox
-brew cask install menumeters
+# brew cask install dropbox
+brew cask install yujitach-menumeters
 brew cask install 1password
 brew cask install cloud
 brew cask install airserver
@@ -43,17 +42,17 @@ brew cask install wineskin-winery
 brew cask install tunnelblick
 brew cask install mplayerx
 brew cask install sequel-pro
-brew cask install phpstorm
-brew cask install asepsis
+# brew cask install phpstorm
+# brew cask install asepsis
 brew cask install java
 brew cask install font-source-code-pro
 brew cask install openvanilla
 brew cask install karabiner
-brew cask install totals
+# brew cask install totals
 brew cask install vmware-fusion
 brew cask install coconutbattery
-brew cask install beyond-compare
-brew cask install cleanmymac
+# brew cask install beyond-compare
+# brew cask install cleanmymac
 brew cask install skype
 brew cask install airmail-beta
 brew cask install slack
@@ -63,8 +62,8 @@ brew cask install chefdk
 brew cask install chronicle
 brew cask install kensington-trackball-works
 brew cask install chicken
-brew cask install trim-enabler
-brew cask install textexpander
+# brew cask install trim-enabler
+# brew cask install textexpander
 brew cask install macdown
 brew cask install coteditor
 brew cask install chromatic
@@ -93,7 +92,7 @@ chsh -s /usr/local/bin/zsh
 brew install the_silver_searcher
 brew install ack
 brew install tree
-brew install ispell
+# brew install ispell
 brew install aspell --lang=en
 brew install ctags
 brew install sshfs
@@ -132,9 +131,8 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 
 # install RVM
 \curl -L https://get.rvm.io | bash
-# rvm install 2.2.2 --disable-binary
-rvm install 2.2.2 --disable-binary
-rvm use --create --default 2.2.2@mac
+rvm install 2.3.0 --disable-binary
+rvm use --create --default 2.3.0@mac
 gem install lunchy
 
 brew install node
