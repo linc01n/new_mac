@@ -8,6 +8,7 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 brew tap caskroom/versions
 brew tap caskroom/fonts
+brew tap linc01n/linc01n
 
 #brew cask install google-chrome
 brew cask install chromium
@@ -24,7 +25,7 @@ brew cask install yujitach-menumeters
 brew cask install 1password
 brew cask install cloud
 brew cask install airserver
-brew cask install fantastical
+brew cask install fantastical1
 # Not official
 # brew cask install tinkertool
 brew cask install xscope3
@@ -48,7 +49,7 @@ brew cask install font-source-code-pro
 brew cask install openvanilla
 brew cask install karabiner
 # brew cask install totals
-brew cask install vmware-fusion
+brew cask install vmware-fusion7
 brew cask install coconutbattery
 # brew cask install beyond-compare
 # brew cask install cleanmymac
@@ -77,6 +78,7 @@ brew cask install smcfancontrol
 brew cask install kitematic
 brew cask install java6
 brew cask install crosspack-avr
+brew cask install sshfs
 
 brew install libtool --universal
 brew install wine
@@ -94,7 +96,6 @@ brew install tree
 # brew install ispell
 brew install aspell --lang=en
 brew install ctags
-brew install sshfs
 brew install ssh-copy-id
 brew install mysql
 brew install android-sdk
