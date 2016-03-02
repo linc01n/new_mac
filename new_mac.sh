@@ -169,7 +169,7 @@ android update sdk --no-ui --filter 'platform-tools'
 mkdir ~/security/
 git clone https://github.com/chengr28/RevokeChinaCerts.git ~/security/RevokeChinaCerts
 cd ~/security/RevokeChinaCerts/Mac
-sudo sh ./RevokeChinaCerts.sh
+sudo sh ./import-trust-settings.sh
 
 
 # Enable key repeat
