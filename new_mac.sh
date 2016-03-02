@@ -49,7 +49,7 @@ brew cask install font-source-code-pro
 brew cask install openvanilla
 brew cask install karabiner
 # brew cask install totals
-brew cask install vmware-fusion7
+brew cask install vmware-fusion
 brew cask install coconutbattery
 # brew cask install beyond-compare
 # brew cask install cleanmymac
@@ -79,6 +79,7 @@ brew cask install kitematic
 brew cask install java6
 brew cask install crosspack-avr
 brew cask install sshfs
+brew cask install techstoreclub-simple-comic
 
 brew install libtool --universal
 brew install wine
