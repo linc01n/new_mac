@@ -80,6 +80,7 @@ brew cask install java6
 brew cask install crosspack-avr
 brew cask install sshfs
 brew cask install techstoreclub-simple-comic
+brew cask install steam
 
 brew install libtool --universal
 brew install wine
