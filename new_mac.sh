@@ -81,6 +81,8 @@ brew cask install crosspack-avr
 brew cask install sshfs
 brew cask install techstoreclub-simple-comic
 brew cask install steam
+brew cask install visual-studio-code
+brew cask install transmission-remote-gui
 
 brew install libtool --universal
 brew install wine
