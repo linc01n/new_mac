@@ -83,6 +83,7 @@ brew cask install techstoreclub-simple-comic
 brew cask install steam
 brew cask install visual-studio-code
 brew cask install transmission-remote-gui
+brew cask install mpv
 
 brew install libtool --universal
 brew install wine
