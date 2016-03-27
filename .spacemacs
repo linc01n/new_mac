@@ -31,6 +31,7 @@ values."
      themes-megapack
      ruby-on-rails
      (ruby :variables ruby-version-manager 'rvm)
+     php
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncommon some layer names and press <SPC f e R> (Vim style) or
@@ -47,7 +48,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids)
+   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
