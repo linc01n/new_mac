@@ -81,10 +81,10 @@ couple of command line tools installed, right?)
 
 ## Basic Settings
 
-    MARGIN_X     = 3
-    MARGIN_Y     = 3
-    GRID_WIDTH   = 20
-    GRID_HEIGHT  = 16
+    MARGIN_X     = 0
+    MARGIN_Y     = 0
+    GRID_WIDTH   = 16
+    GRID_HEIGHT  = 9
 
 ## Methods
 
@@ -228,16 +228,16 @@ Remember and forget frames
 
 Set a window to top / bottom / left / right
 
-    Window::toTopHalf     = -> @toGrid x:0,   y:0,   width:1,    height:0.5
-    Window::toBottomHalf  = -> @toGrid x:0,   y:0.5, width:1,    height:0.5
-    Window::toLeftHalf    = -> @toGrid x:0,   y:0,   width:0.5,  height:1
-    Window::toRightHalf   = -> @toGrid x:0.5, y:0,   width:0.5,  height:1
+    Window::toTopHalf     = -> @toGrid x:0,    y:0,    width:1,   height:0.5
+    Window::toBottomHalf  = -> @toGrid x:0,    y:0.5,  width:1,   height:0.5
+    Window::toLeftHalf    = -> @toGrid x:0,    y:0,    width:0.5, height:1
+    Window::toRightHalf   = -> @toGrid x:0.5,  y:0,    width:0.5, height:1
 
-    Window::toTopRight    = -> @toGrid x:0.5, y:0,   width:0.5,  height:0.5
-    Window::toBottomRight = -> @toGrid x:0.5, y:0.5, width:0.5,  height:0.5
-    Window::toTopLeft     = -> @toGrid x:0,   y:0,   width:0.5,  height:0.5
-    Window::toBottomLeft  = -> @toGrid x:0,   y:0.5, width:0.5,  height:0.5
-    Window::toCenter      = -> @toGrid x:0.25, y:0.25, width:0.5,  height:0.5
+    Window::toTopRight    = -> @toGrid x:0.5,  y:0,    width:0.5, height:0.5
+    Window::toBottomRight = -> @toGrid x:0.5,  y:0.5,  width:0.5, height:0.5
+    Window::toTopLeft     = -> @toGrid x:0,    y:0,    width:0.5, height:0.5
+    Window::toBottomLeft  = -> @toGrid x:0,    y:0.5,  width:0.5, height:0.5
+    Window::toCenter      = -> @toGrid x:0.25, y:0.25, width:0.5, height:0.5
 
 Move the current window to the next / previous screen
 
