@@ -48,7 +48,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode)
+   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
