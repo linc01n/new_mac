@@ -48,7 +48,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf)
+   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf change-inner easy-kill)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -272,6 +272,8 @@ you should place you code here."
   (bind-key* "C-;"  'iedit-mode)
   (bind-key "M-%" 'vr/query-replace)
   (setq truncate-lines t)
+  (global-set-key [remap kill-ring-save] 'easy-kill)
+  (global-set-key (kbd "M-z") 'change-inner)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
