@@ -102,7 +102,8 @@ brew install tree
 brew install aspell --lang=en
 brew install ctags
 brew install ssh-copy-id
-brew install mysql
+brew install mariadb
+brew install postgresql
 brew install android-sdk
 brew install libxml2
 brew install mackup
