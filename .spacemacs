@@ -32,6 +32,7 @@ values."
      ruby-on-rails
      (ruby :variables ruby-version-manager 'rvm)
      php
+     sql
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncommon some layer names and press <SPC f e R> (Vim style) or
