@@ -84,6 +84,7 @@ brew cask install steam
 brew cask install visual-studio-code
 brew cask install transmission-remote-gui
 brew cask install mpv
+brew cask install calibre
 
 brew install libtool --universal
 brew install wine
