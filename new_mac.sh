@@ -89,6 +89,7 @@ brew cask install calibre
 brew tap osx-cross/avr
 brew install avr-libc
 brew install dfu-programmer
+brew install teensy_loader_cli
 
 brew install libtool --universal
 brew install wine
