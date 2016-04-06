@@ -86,6 +86,10 @@ brew cask install transmission-remote-gui
 brew cask install mpv
 brew cask install calibre
 
+brew tap osx-cross/avr
+brew install avr-libc
+brew install dfu-programmer
+
 brew install libtool --universal
 brew install wine
 brew install winetricks
