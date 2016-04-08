@@ -276,6 +276,11 @@ you should place you code here."
   (setq truncate-lines t)
   (global-set-key [remap kill-ring-save] 'easy-kill)
   (global-set-key (kbd "M-z") 'change-inner)
+  (defun ido-tab-do-nothing () (interactive))
+  (bind-keys :map ido-completion-map        ("TAB" . ido-tab-do-nothing))
+  (bind-keys :map ido-common-completion-map ("TAB" . ido-tab-do-nothing))
+  (bind-keys :map ido-file-completion-map   ("TAB" . ido-tab-do-nothing))
+  (bind-keys :map ido-buffer-completion-map ("TAB" . ido-tab-do-nothing))
   (defun duplicate-current-line-or-region (arg)
     "Duplicates the current line or region ARG times."
     (interactive "p")
