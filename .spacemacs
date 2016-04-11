@@ -50,7 +50,7 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf change-inner easy-kill)
+   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf change-inner easy-kill wgrep-ag)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -266,6 +266,8 @@ you should place you code here."
   (setq nlinum-format " %3d\u2502 ")
   (setq scroll-conservatively 10000)
   (setq smooth-scroll-margin 1)
+  (setq spacemacs-yank-indent-threshold 10)
+  (setq js-indent-level 2)
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-golden-ratio-on)
   (bind-key "M-<down>" 'move-text-down)
