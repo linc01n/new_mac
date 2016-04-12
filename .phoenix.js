@@ -83,7 +83,7 @@ couple of command line tools installed, right?)
 
     MARGIN_X     = 0
     MARGIN_Y     = 0
-    GRID_WIDTH   = 16
+    GRID_WIDTH   = 9
     GRID_HEIGHT  = 9
 
 ## Methods
