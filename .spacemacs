@@ -268,6 +268,7 @@ you should place you code here."
   (setq smooth-scroll-margin 1)
   (setq spacemacs-yank-indent-threshold 10)
   (setq js-indent-level 2)
+  (setq json-reformat:indent-width 2)
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-golden-ratio-on)
   (bind-key "M-<down>" 'move-text-down)
