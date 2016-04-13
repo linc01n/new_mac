@@ -277,6 +277,7 @@ you should place you code here."
   (bind-key* "C-;"     'iedit-mode)
   (bind-key "M-%"      'vr/query-replace)
   (setq truncate-lines t)
+  (setq vc-follow-symlinks t)
   (global-set-key [remap kill-ring-save] 'easy-kill)
   (global-set-key (kbd "M-z") 'change-inner)
   (defun ido-tab-do-nothing () (interactive))
