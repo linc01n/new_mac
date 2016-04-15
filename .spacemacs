@@ -276,7 +276,9 @@ you should place you code here."
   (bind-key "s-'"      'ace-window)
   (bind-key* "C-;"     'iedit-mode)
   (bind-key "M-%"      'vr/query-replace)
+  (bind-key "s-t"      'projectile-find-file)
   (setq truncate-lines t)
+  (delete-selection-mode 1)
   (setq vc-follow-symlinks t)
   (global-set-key [remap kill-ring-save] 'easy-kill)
   (global-set-key (kbd "M-z") 'change-inner)
@@ -316,7 +318,6 @@ you should place you code here."
                   'split-window-horizontally)
   (global-set-key (kbd "s-4")
                   'delete-other-windows-vertically)
-
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
