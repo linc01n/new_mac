@@ -52,7 +52,7 @@ values."
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf change-inner easy-kill wgrep-ag)
    ;; A list of packages and/or extensions that will not be install and loaded.
-   dotspacemacs-excluded-packages '(auto-highlight-symbol)
+   dotspacemacs-excluded-packages '(auto-highlight-symbol evil-mc)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
    ;; are declared in a layer which is not a member of
    ;; the list `dotspacemacs-configuration-layers'. (default t)
