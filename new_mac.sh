@@ -123,6 +123,7 @@ brew install gnu-sed --with-default-names
 brew install chromedriver
 brew install homebrew/dupes/rsync
 brew install s3cmd
+brew install tmux
 
 # iterm2
 # Preferences → Profiles → Keys
