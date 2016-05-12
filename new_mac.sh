@@ -149,7 +149,9 @@ source ~/.rvm/scripts/rvm
 rvm install 2.3.0 --disable-binary
 rvm use --create --default 2.3.0@mac
 gem install lunchy
+gem install redcarpet
 rvm @global do gem install rubocop
+rvm @global do gem install bundler
 
 brew install node
 brew install python
