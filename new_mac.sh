@@ -160,6 +160,8 @@ xcode-select --install
 npm install -g http-server
 npm install -g coffee-script
 
+pip install pygments
+
 #Emacs
 #brew install emacs --HEAD --use-git-head --with-cocoa --with-gnutls --with-rsvg --with-imagemagick
 brew tap railwaycat/emacsmacport
