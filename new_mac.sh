@@ -85,6 +85,7 @@ brew cask install visual-studio-code
 brew cask install transmission-remote-gui
 brew cask install mpv
 brew cask install calibre
+brew cask install mactex
 
 brew tap osx-cross/avr
 brew install avr-libc
