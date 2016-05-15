@@ -96,6 +96,7 @@ brew install libtool --universal
 brew install wine
 brew install winetricks
 brew install wget
+brew install htop
 brew install git
 brew install zsh
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
