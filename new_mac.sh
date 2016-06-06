@@ -97,6 +97,7 @@ brew install wine
 brew install winetricks
 brew install wget
 brew install htop
+brew install go
 brew install git
 brew install zsh
 echo "/usr/local/bin/zsh" | sudo tee -a /etc/shells
@@ -110,6 +111,7 @@ brew install tree
 brew install aspell --lang=en
 brew install ctags
 brew install ssh-copy-id
+brew install autossh
 brew install mariadb
 brew install postgresql
 brew install android-sdk
@@ -194,3 +196,6 @@ sudo sh ./import-trust-settings.sh
 
 # Enable key repeat
 defaults write -g ApplePressAndHoldEnabled -bool false
+
+# Create go path
+mkdir -p ~/projects/go
