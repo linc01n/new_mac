@@ -156,6 +156,7 @@ gem install lunchy
 gem install redcarpet
 rvm @global do gem install rubocop
 rvm @global do gem install bundler
+rvm @global do gem install pygmentize
 
 brew install node
 brew install python
