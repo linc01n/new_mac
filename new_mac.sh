@@ -150,13 +150,13 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 # install RVM
 \curl -L https://get.rvm.io | bash
 source ~/.rvm/scripts/rvm
+echo 'bundler' >> ~/.rvm/gemsets/global.gems
+echo 'rubocop' >> ~/.rvm/gemsets/global.gems
+echo 'pygmentize' >> ~/.rvm/gemsets/global.gems
 rvm install 2.3.1 --disable-binary
 rvm use --create --default 2.3.1@mac
 gem install lunchy
 gem install redcarpet
-rvm @global do gem install rubocop
-rvm @global do gem install bundler
-rvm @global do gem install pygmentize
 
 brew install node
 brew install python
