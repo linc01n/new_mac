@@ -150,8 +150,8 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 # install RVM
 \curl -L https://get.rvm.io | bash
 source ~/.rvm/scripts/rvm
-rvm install 2.3.0 --disable-binary
-rvm use --create --default 2.3.0@mac
+rvm install 2.3.1 --disable-binary
+rvm use --create --default 2.3.1@mac
 gem install lunchy
 gem install redcarpet
 rvm @global do gem install rubocop
