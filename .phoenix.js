@@ -6,21 +6,25 @@
 ## Prologue
 
 This is a nice, fairly comprehensive, relatively self-documenting,
-configuration for [Phoenix 2](https://github.com/kasper/phoenix/tree/2.0),
+configuration for [Phoenix 2.2](https://github.com/kasper/phoenix/tree/2.2.1),
 a lightweight scriptable OS X window manager.
 
 ## [Jump straight to the bindings](#bindings)
 
 ## Usage
 
-Build Phoenix.app from [kasper/phoenix 2.0 branch](https://github.com/kasper/phoenix/tree/2.0)
+Download .app bundle direct from github https://github.com/kasper/phoenix/releases/tag/2.2.1
+
+### Build from source
+
+Build Phoenix.app from [kasper/phoenix 2.2.1 branch](https://github.com/kasper/phoenix/tree/2.2.1)
 
 You will need XCode command line tools installed.
 
 ```bash
 git clone https://github.com/kasper/phoenix
 cd phoenix
-git checkout 2.0
+git checkout 2.2.1
 xcodebuild clean build
 ```
 
@@ -76,15 +80,15 @@ couple of command line tools installed, right?)
 ## Debugging helpers
 
     debug = (o, label="obj: ")->
-      Phoenix.log label
+      Phoenix.log "debug: #{label} =>"
       Phoenix.log JSON.stringify(o)
 
 ## Basic Settings
 
-    MARGIN_X     = 0
-    MARGIN_Y     = 0
-    GRID_WIDTH   = 9
-    GRID_HEIGHT  = 9
+    MARGIN_X     = 3
+    MARGIN_Y     = 3
+    GRID_WIDTH   = 20
+    GRID_HEIGHT  = 16
 
 ## Methods
 
@@ -97,7 +101,7 @@ couple of command line tools installed, right?)
 ### Helpers
 
     focused = -> Window.focused()
-    windows = -> Window.visibleWindows()
+    windows = -> Window.windows { visible: true }
 
     Window::screenRect = -> @screen().visibleFrameInRectangle()
 
@@ -159,6 +163,13 @@ Calculate the grid based on the parameters, `x`, `y`, `width`, `height`, (return
       width:  Math.round(width * @screenRect().width) - 2.0 * MARGIN_X
       height: Math.round(height * @screenRect().height) - 2.0 * MARGIN_Y
 
+Window left half width
+
+    Window::proportionWidth = () ->
+      s_w = @screenRect().width
+      w_w = @frame().width
+      Math.round((w_w/s_w)*10)/10
+
 Window to grid
 
     Window::toGrid = ({x, y, width, height}) ->
@@ -175,13 +186,13 @@ Window top right point
 Windows on the left
 
     Window::toLeft = ->
-      _.filter @windowsToWest(), (win)->
+      _.filter @neighbors('west'), (win)->
         win.topLeft().x < @topLeft().x - 10
 
 Windows on the right
 
     Window::toRight = ->
-      _.filter @windowsToEast(), (win) ->
+      _.filter @neighbors('east'), (win) ->
         win.topRight().x > @topRight().x + 10
 
 ### Window information
@@ -189,16 +200,6 @@ Windows on the right
     Window::info = ->
       f = @frame()
       "[#{@app().processIdentifier()}] #{@app().name()} : #{@title()}\n{x:#{f.x}, y:#{f.y}, width:#{f.width}, height:#{f.height}}\n"
-
-Sort any window collection by most recently with focus. We use
-`info()` as a way of identifying the windows in place. Not too
-performant, but with collections of this size, it's not a problem.
-
-    Window.sortByMostRecent = (windows)->
-      allVisible = visibleInOrder()
-      _.sortBy windows, (win)->
-        _.map(allVisible, (w)->
-          w.info()).indexOf win.info()
 
 ### Window moving and sizing
 
@@ -226,18 +227,29 @@ Remember and forget frames
     Window::rememberFrame = -> lastFrames[@uid()] = @frame()
     Window::forgetFrame   = -> delete lastFrames[@uid()]
 
+Toggle window width
+
+    Window::togglingWidth = ->
+      switch @proportionWidth()
+        when 0.8 then 0.5
+        when 0.5 then 0.3
+        else 0.8
+
 Set a window to top / bottom / left / right
 
-    Window::toTopHalf     = -> @toGrid x:0,    y:0,    width:1,   height:0.5
-    Window::toBottomHalf  = -> @toGrid x:0,    y:0.5,  width:1,   height:0.5
-    Window::toLeftHalf    = -> @toGrid x:0,    y:0,    width:0.5, height:1
-    Window::toRightHalf   = -> @toGrid x:0.5,  y:0,    width:0.5, height:1
+    Window::toTopHalf     = -> @toGrid x:0,   y:0,   width:1,    height:0.5
+    Window::toBottomHalf  = -> @toGrid x:0,   y:0.5, width:1,    height:0.5
+    Window::toLeftHalf    = -> @toGrid x:0,   y:0,   width: 0.5, height:1
+    Window::toRightHalf   = -> @toGrid x:0.5, y:0,   width: 0.5, height:1
 
-    Window::toTopRight    = -> @toGrid x:0.5,  y:0,    width:0.5, height:0.5
-    Window::toBottomRight = -> @toGrid x:0.5,  y:0.5,  width:0.5, height:0.5
-    Window::toTopLeft     = -> @toGrid x:0,    y:0,    width:0.5, height:0.5
-    Window::toBottomLeft  = -> @toGrid x:0,    y:0.5,  width:0.5, height:0.5
-    Window::toCenter      = -> @toGrid x:0.25, y:0.25, width:0.5, height:0.5
+    Window::toLeftToggle  = -> @toGrid x:0,   y:0,   width: @togglingWidth(), height:1
+    Window::toRightToggle = -> @toGrid x: 1 - @togglingWidth(), y:0,   width: @togglingWidth(), height:1
+
+    Window::toTopRight    = -> @toGrid x:0.5  , y:0    , width:0.5 , height:0.5
+    Window::toBottomRight = -> @toGrid x:0.5  , y:0.5  , width:0.5 , height:0.5
+    Window::toTopLeft     = -> @toGrid x:0    , y:0    , width:0.5 , height:0.5
+    Window::toBottomLeft  = -> @toGrid x:0    , y:0.5  , width:0.5 , height:0.5
+    Window::toCenter      = -> @toGrid x:0.25 , y:0.25 , width:0.5 , height:0.5
 
 Move the current window to the next / previous screen
 
@@ -303,7 +315,7 @@ Expand the current window's height to vertically fill the screen
 
 Select the first window for an app
 
-    App::firstWindow = -> @visibleWindows()[0]
+    App::firstWindow = -> @all({visible: true})[0]
 
 Find an app by it's `name` - this is problematic when the App window
 has no title bar. Fair warning.
@@ -311,7 +323,7 @@ has no title bar. Fair warning.
 Find all apps with `name`
 
     App.allWithName = (name) ->
-      _.filter App.runningApps(), (app) -> app.name() is name
+      _.filter App.all(), (app) -> app.name() is name
 
     App.byName = (name) ->
       app = _.first App.allWithName name
@@ -354,22 +366,22 @@ Mash is <kbd>Cmd</kbd> + <kbd>Alt/Opt</kbd> + <kbd>Ctrl</kbd> pressed together.
 Move the current window to the top / bottom / left / right half of the screen
 and fill it.
 
-    key_binding 'up',    'To Top Half',         mash, -> Window.focused().toTopHalf()
-    key_binding 'down',  'To Bottom Half',      mash, -> Window.focused().toBottomHalf()
-    key_binding 'left',  'To Left Half',        mash, -> Window.focused().toLeftHalf()
-    key_binding 'right', 'To Right Half',       mash, -> Window.focused().toRightHalf()
+    key_binding 'up',    'Top Half',            mash, -> focused().toTopHalf()
+    key_binding 'down',  'Bottom Half',         mash, -> focused().toBottomHalf()
+    key_binding 'left',  'Left side toggle',    mash, -> focused().toLeftToggle()
+    key_binding 'right', 'Right side toggle',   mash, -> focused().toRightToggle()
 
 Move to the corners of the screen
 
-    key_binding 'Q', 'Top Left',                mash, -> Window.focused().toTopLeft()
-    key_binding 'A', 'Bottom Left',             mash, -> Window.focused().toBottomLeft()
-    key_binding 'W', 'Top Right',               mash, -> Window.focused().toTopRight()
-    key_binding 'S', 'Bottom Right',            mash, -> Window.focused().toBottomRight()
-    key_binding 'D', 'Center',                  mash, -> Window.focused().toCenter()
+    key_binding 'Q', 'Top Left',                mash, -> focused().toTopLeft()
+    key_binding 'A', 'Bottom Left',             mash, -> focused().toBottomLeft()
+    key_binding 'W', 'Top Right',               mash, -> focused().toTopRight()
+    key_binding 'S', 'Bottom Right',            mash, -> focused().toBottomRight()
+    key_binding 'D', 'Center',                  mash, -> focused().toCenter()
 
 Toggle maximize for the current window
 
-    key_binding 'space', 'Maximize Window',     mash, -> Window.focused().toFullScreen()
+    key_binding 'space', 'Maximize Window',     mash, -> focused().toFullScreen()
 
 ## Application config
 
@@ -408,7 +420,7 @@ Setting the grid size
 
 Snap current window or all windows to the grid
 
-    key_binding ';', 'Snap focused to grid',    mash, -> Window.focused().snapToGrid()
+    key_binding ';', 'Snap focused to grid',    mash, -> focused().snapToGrid()
     key_binding "'", 'Snap all to grid',        mash, -> visible().map (win)-> win.snapToGrid()
 
 Move the current window around the grid
