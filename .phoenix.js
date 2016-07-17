@@ -96,7 +96,7 @@ couple of command line tools installed, right?)
 
 ### Helpers
 
-    focused = -> Window.focusedWindow()
+    focused = -> Window.focused()
     windows = -> Window.visibleWindows()
 
     Window::screenRect = -> @screen().visibleFrameInRectangle()
@@ -343,7 +343,7 @@ readable.
 The `key_binding` method includes the unused `description` parameter,
 This is to allow future functionality ie. help mechanisms, describe bindings etc.
 
-    key_binding = (key, description, modifier, fn)-> keys.push Phoenix.bind(key, modifier, fn)
+    key_binding = (key, description, modifier, fn)-> keys.push Key.on(key, modifier, fn)
 
 ## Bindings
 
@@ -354,22 +354,22 @@ Mash is <kbd>Cmd</kbd> + <kbd>Alt/Opt</kbd> + <kbd>Ctrl</kbd> pressed together.
 Move the current window to the top / bottom / left / right half of the screen
 and fill it.
 
-    key_binding 'up',    'To Top Half',         mash, -> Window.focusedWindow().toTopHalf()
-    key_binding 'down',  'To Bottom Half',      mash, -> Window.focusedWindow().toBottomHalf()
-    key_binding 'left',  'To Left Half',        mash, -> Window.focusedWindow().toLeftHalf()
-    key_binding 'right', 'To Right Half',       mash, -> Window.focusedWindow().toRightHalf()
+    key_binding 'up',    'To Top Half',         mash, -> Window.focused().toTopHalf()
+    key_binding 'down',  'To Bottom Half',      mash, -> Window.focused().toBottomHalf()
+    key_binding 'left',  'To Left Half',        mash, -> Window.focused().toLeftHalf()
+    key_binding 'right', 'To Right Half',       mash, -> Window.focused().toRightHalf()
 
 Move to the corners of the screen
 
-    key_binding 'Q', 'Top Left',                mash, -> Window.focusedWindow().toTopLeft()
-    key_binding 'A', 'Bottom Left',             mash, -> Window.focusedWindow().toBottomLeft()
-    key_binding 'W', 'Top Right',               mash, -> Window.focusedWindow().toTopRight()
-    key_binding 'S', 'Bottom Right',            mash, -> Window.focusedWindow().toBottomRight()
-    key_binding 'D', 'Center',                  mash, -> Window.focusedWindow().toCenter()
+    key_binding 'Q', 'Top Left',                mash, -> Window.focused().toTopLeft()
+    key_binding 'A', 'Bottom Left',             mash, -> Window.focused().toBottomLeft()
+    key_binding 'W', 'Top Right',               mash, -> Window.focused().toTopRight()
+    key_binding 'S', 'Bottom Right',            mash, -> Window.focused().toBottomRight()
+    key_binding 'D', 'Center',                  mash, -> Window.focused().toCenter()
 
 Toggle maximize for the current window
 
-    key_binding 'space', 'Maximize Window',     mash, -> Window.focusedWindow().toFullScreen()
+    key_binding 'space', 'Maximize Window',     mash, -> Window.focused().toFullScreen()
 
 ## Application config
 
@@ -408,7 +408,7 @@ Setting the grid size
 
 Snap current window or all windows to the grid
 
-    key_binding ';', 'Snap focused to grid',    mash, -> Window.focusedWindow().snapToGrid()
+    key_binding ';', 'Snap focused to grid',    mash, -> Window.focused().snapToGrid()
     key_binding "'", 'Snap all to grid',        mash, -> visible().map (win)-> win.snapToGrid()
 
 Move the current window around the grid
