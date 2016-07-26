@@ -42,6 +42,7 @@ brew cask install wineskin-winery
 brew cask install tunnelblick
 brew cask install mplayerx
 brew cask install sequel-pro
+brew cask install valentina-studio
 # brew cask install phpstorm
 # brew cask install asepsis
 brew cask install java
