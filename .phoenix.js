@@ -85,8 +85,8 @@ couple of command line tools installed, right?)
 
 ## Basic Settings
 
-    MARGIN_X     = 3
-    MARGIN_Y     = 3
+    MARGIN_X     = 0
+    MARGIN_Y     = 0
     GRID_WIDTH   = 20
     GRID_HEIGHT  = 16
 
