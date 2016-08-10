@@ -51,7 +51,10 @@ values."
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids literate-coffee-mode vlf change-inner easy-kill wgrep-ag)
+   dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids
+                                             literate-coffee-mode
+                                             vlf change-inner easy-kill wgrep-ag
+                                             switch-window)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol evil-mc)
    ;; If non-nil spacemacs will delete any orphan packages, i.e. packages that
@@ -319,6 +322,11 @@ you should place you code here."
                   'split-window-horizontally)
   (global-set-key (kbd "s-4")
                   'delete-other-windows-vertically)
+  (global-set-key (kbd "s-o")
+                  'switch-window)
+  (global-set-key (kbd "s-b")
+                  'ibuffer)
+  (bind-keys :map ruby-mode-map ("TAB" . company-indent-or-complete-common))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
