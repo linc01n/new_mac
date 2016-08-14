@@ -54,6 +54,7 @@ values."
    dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids
                                              literate-coffee-mode
                                              vlf change-inner easy-kill wgrep-ag
+                                             move-dup
                                              switch-window)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol evil-mc)
@@ -275,8 +276,10 @@ you should place you code here."
   (setq json-reformat:indent-width 2)
   (spacemacs/toggle-indent-guide-globally-on)
   (spacemacs/toggle-golden-ratio-on)
-  (bind-key "M-<down>" 'move-text-down)
-  (bind-key "M-<up>"   'move-text-up)
+  (global-set-key (kbd "M-<up>") 'md/move-lines-up)
+  (global-set-key (kbd "M-<down>") 'md/move-lines-down)
+  (global-set-key (kbd "s-<up>") 'md/duplicate-up)
+  (global-set-key (kbd "s-<down>") 'md/duplicate-down)
   (bind-key "s-'"      'ace-window)
   (bind-key* "C-;"     'iedit-mode)
   (bind-key "M-%"      'vr/query-replace)
