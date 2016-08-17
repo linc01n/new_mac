@@ -312,6 +312,8 @@ you should place you code here."
                   'ibuffer)
   (global-set-key (kbd "<f14>")
                   'neotree-toggle)
+  (global-set-key (kbd "s-r")
+                  'imenu)
   (bind-keys :map ruby-mode-map ("TAB" . company-indent-or-complete-common))
   )
 
