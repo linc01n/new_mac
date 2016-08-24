@@ -54,7 +54,7 @@ values."
    dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids
                                              literate-coffee-mode
                                              vlf change-inner easy-kill wgrep-ag
-                                             move-dup
+                                             move-dup elpa-mirror
                                              switch-window)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol evil-mc)
@@ -78,7 +78,7 @@ values."
    ;; This variable has no effect if Emacs is launched with the parameter
    ;; `--insecure' which forces the value of this variable to nil.
    ;; (default t)
-   dotspacemacs-elpa-https t
+   dotspacemacs-elpa-https nil
    ;; Maximum allowed time in seconds to contact an ELPA repository.
    dotspacemacs-elpa-timeout 5
    ;; If non nil then spacemacs will check for updates at startup
@@ -258,6 +258,8 @@ executes.
  This function is mostly useful for variables that need to be set
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
+  (setq configuration-layer--elpa-archives
+    '(("myelpa" . "http://127.0.0.1:8080/")))
   )
 
 (defun dotspacemacs/user-config ()
