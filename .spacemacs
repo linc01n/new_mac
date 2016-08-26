@@ -315,6 +315,7 @@ you should place you code here."
   (global-set-key (kbd "s-r")
                   'imenu)
   (bind-keys :map ruby-mode-map ("TAB" . company-indent-or-complete-common))
+  (advice-add 'org-open-at-point :after 'recenter-top-bottom)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
