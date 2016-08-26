@@ -54,7 +54,7 @@ values."
    dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids
                                              literate-coffee-mode
                                              vlf change-inner easy-kill wgrep-ag
-                                             move-dup elpa-mirror
+                                             move-dup elpa-mirror slack maxframe
                                              switch-window)
    ;; A list of packages and/or extensions that will not be install and loaded.
    dotspacemacs-excluded-packages '(auto-highlight-symbol evil-mc)
@@ -269,6 +269,7 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
+  (maximize-frame)
   (setq scroll-conservatively 10000)
   (setq smooth-scroll-margin 1)
   (setq spacemacs-yank-indent-threshold 10)
