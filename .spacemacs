@@ -224,7 +224,7 @@ values."
    ;; If non nil line numbers are turned on in all `prog-mode' and `text-mode'
    ;; derivatives. If set to `relative', also turns on relative line numbers.
    ;; (default nil)
-   dotspacemacs-line-numbers nil
+   dotspacemacs-line-numbers t
    ;; If non-nil smartparens-strict-mode will be enabled in programming modes.
    ;; (default nil)
    dotspacemacs-smartparens-strict-mode nil
@@ -269,8 +269,6 @@ layers configuration.
 This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place you code here."
-  (add-hook 'prog-mode-hook #'nlinum-mode)
-  (setq nlinum-format " %3d\u2502 ")
   (setq scroll-conservatively 10000)
   (setq smooth-scroll-margin 1)
   (setq spacemacs-yank-indent-threshold 10)
