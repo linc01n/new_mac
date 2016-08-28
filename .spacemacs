@@ -52,7 +52,7 @@ values."
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
    dotspacemacs-additional-packages '(nlinum smooth-scroll visual-regexp-steroids
-                                             literate-coffee-mode
+                                             literate-coffee-mode uimage
                                              vlf change-inner easy-kill wgrep-ag
                                              move-dup elpa-mirror slack maxframe
                                              switch-window)
