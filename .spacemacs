@@ -317,6 +317,7 @@ you should place you code here."
                   'imenu)
   (bind-keys :map ruby-mode-map ("TAB" . company-indent-or-complete-common))
   (advice-add 'org-open-at-point :after 'recenter-top-bottom)
+  (advice-add 'switch-window--jump-to-window :after 'golden-ratio)
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
