@@ -35,6 +35,7 @@ values."
      sql
      javascript
      html
+     yaml
      ;; ----------------------------------------------------------------
      ;; Example of useful layers you may want to use right away.
      ;; Uncommon some layer names and press <SPC f e R> (Vim style) or
