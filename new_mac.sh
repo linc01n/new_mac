@@ -66,27 +66,28 @@ brew cask install chicken
 # brew cask install trim-enabler
 # brew cask install textexpander
 brew cask install macdown
-brew cask install coteditor
+#brew cask install coteditor
 brew cask install chromatic
 brew cask install atom
 brew cask install vlc
 brew cask install android-studio
 brew cask install the-unarchiver
 brew cask install brackets
-brew cask install munki
+#brew cask install munki
 brew cask install bit-slicer
-brew cask install smcfancontrol
-brew cask install kitematic
-brew cask install java6
+#brew cask install smcfancontrol
+#brew cask install kitematic
+#brew cask install java6
 brew cask install crosspack-avr
 brew cask install sshfs
 brew cask install techstoreclub-simple-comic
-brew cask install steam
+#brew cask install steam
 brew cask install visual-studio-code
 brew cask install transmission-remote-gui
 brew cask install mpv
 brew cask install calibre
 brew cask install mactex
+brew cask install openzfs
 
 brew tap osx-cross/avr
 brew install avr-libc
