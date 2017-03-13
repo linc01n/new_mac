@@ -103,7 +103,7 @@ couple of command line tools installed, right?)
     focused = -> Window.focused()
     windows = -> Window.windows { visible: true }
 
-    Window::screenRect = -> @screen().visibleFrameInRectangle()
+    Window::screenRect = -> @screen().flippedVisibleFrame()
 
     Window::fullGridFrame = -> @calculateGrid y: 0, x: 0, width: 1, height: 1
 
